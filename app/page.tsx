@@ -26,16 +26,16 @@ export default function Home() {
         <header className="font-bold text-2xl pb-8">
           Hello! I'm CHUAH Wei Jie, a <RoughNotation type="highlight" show={true} color="#E5D7FC">developer</RoughNotation> based in Singapore / Malaysia.
         </header>
-        <div className="text-xm text-gray-500 pb-2">
-          I love building tools that are <RoughNotation type="highlight" show={true} color="#F0D3E5">user friendly, simple</RoughNotation> and <RoughNotation type="highlight" show={true} color="#F6E79B">delightful</RoughNotation>.
+        <div className="text-xm text-gray-500 pb-3">
+          I’m passionate about creating tools that are <RoughNotation type="highlight" show={true} color="#F0D3E5">user friendly, simple</RoughNotation> and a <RoughNotation type="highlight" show={true} color="#F6E79B">joy to use</RoughNotation>.
         </div>
-        <div className="text-xm text-gray-500 pb-2">
-          I was a student at University Malaysia Pahang where I spent 42 months learning the fundamental of software engineering. I also worked in s startup company at Taiwan where my role was split between <RoughNotation type="highlight" show={true} color="#F2CDD0">frontend</RoughNotation> and <RoughNotation type="highlight" show={true} color="#E5D7FC">backend</RoughNotation> development (and more).
+        <div className="text-xm text-gray-500 pb-3">
+          I studied Software Engineering at Universiti Malaysia Pahang, where I spent 42 months building a strong foundation in the field. Later, I joined a startup in Taiwan, taking on a hybrid role that involved both <RoughNotation type="highlight" show={true} color="#F2CDD0">frontend</RoughNotation> and <RoughNotation type="highlight" show={true} color="#E5D7FC">backend</RoughNotation> development along with a variety of other responsibilities.
         </div>
-        <div className="text-xm text-gray-500 pb-2">
-          Through these experiences, I had the opportunity to work with both small and large, specialised and cross-functional team across different countries and developed a working style that leans towards flexibility, clarity and collaboration.
+        <div className="text-xm text-gray-500 pb-3">
+          These experiences gave me the chance to collaborate with teams of all sizes, from specialized units to cross-functional groups, across different countries. Along the way, I developed a working style that values flexibility, clear communication, and teamwork.
         </div>
-        <div className="text-xm text-gray-500 pb-2">
+        <div className="text-xm text-gray-500 pb-4">
           I'm currently looking for a new role as a developer. <RoughNotation type="circle" show={true} color="#F0D3E5"><span className="font-bold">Hire me?</span></RoughNotation>
         </div>
         <div className="flex gap-3 pt-4">

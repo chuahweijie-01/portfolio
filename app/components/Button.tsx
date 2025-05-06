@@ -5,9 +5,7 @@ import { IButton } from '../interfaces/IButton'
 
 const Button = (props: IButton) => {
 
-    const redirectToLink = (link: string) => {
-        window.location.href = link;
-    }
+    const redirectToLink = (link: string) => window.location.href = link;
 
     return (
         <button

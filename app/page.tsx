@@ -2,8 +2,23 @@ import Image from "next/image";
 import { RoughNotation } from "react-rough-notation";
 import me from "./assets/me.jpg"
 import Button from "./components/Button";
+import { IButton } from "./interfaces/IButton";
 
 export default function Home() {
+
+  const linkedInButtonConf: IButton = {
+    text: "View LinkedIn",
+    textcolor: "text-white",
+    bgcolor: "bg-slate-800",
+    link: "https://www.linkedin.com/in/chuah-wei-jie-113374191/"
+  }
+
+  const gitHubButtonConf: IButton = {
+    text: "View Github",
+    textcolor: "text-black",
+    bgcolor: "bg-white",
+    link: "https://github.com/chuahweijie-01"
+  }
 
   return (
     <div className="flex pt-5 gap-10">
@@ -24,8 +39,8 @@ export default function Home() {
           I'm currently looking for a new role as a developer. <RoughNotation type="circle" show={true} color="#F0D3E5"><span className="font-bold">Hire me?</span></RoughNotation>
         </div>
         <div className="flex gap-3 pt-4">
-          <Button text="View LinkedIn" bgcolor="bg-slate-800" textcolor="text-white" link="https://www.linkedin.com/in/chuah-wei-jie-113374191/"></Button>
-          <Button text="View Github" bgcolor="bg-white" textcolor="text-black"></Button>
+          <Button {...linkedInButtonConf}></Button>
+          <Button {...gitHubButtonConf}></Button>
         </div>
       </div>
       <div className="flex flex-1/3 justify-end">

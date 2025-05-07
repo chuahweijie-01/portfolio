@@ -1,6 +1,6 @@
 import { useSpring } from "react-spring";
 
-const { useState, useCallback, useEffect } = require("react");
+import { useState, useCallback, useEffect } from "react";
 
 export default function useBoop({
     x = 0,

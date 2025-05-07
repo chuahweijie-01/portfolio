@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import ThemeToggle from './ThemeToggle'
+import Boop from './Boop'
 
 const NavBar = () => {
     return (
@@ -24,7 +25,9 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div>
-                    <ThemeToggle/>
+                    <Boop rotation={20}>
+                        <ThemeToggle />
+                    </Boop>
                 </div>
             </nav>
         </header>

@@ -1,7 +1,7 @@
 'use client';
 
 import { animated } from 'react-spring';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import useBoop from '@/app/hooks/useBoop';
 
 const Boop = ({ children, ...boopConfig }) => {

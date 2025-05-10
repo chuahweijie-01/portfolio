@@ -4,6 +4,7 @@ import me from "./assets/me.jpg"
 import Button from "./components/Button";
 import { IButton } from "./interfaces/IButton";
 import Boop from "./components/Boop";
+import LikeToggle from "./components/LikeToggle";
 
 export default function Home() {
 
@@ -42,6 +43,12 @@ export default function Home() {
           </div>
           <div className="text-xm text-gray-500 pb-4">
             I am currently looking for a new role as a developer. <RoughNotation type="circle" color="#F0D3E5" strokeWidth={2} multiline={true}><span className="font-bold">Hire me?</span></RoughNotation>
+          </div>
+          <div className="text-xm text-gray-500 pb-4">
+            This site is a fun little experiment in making the web more interactive, more cool stuff is on the way. Don’t forget to click that support button and show some love.
+          </div>
+          <div>
+            <Boop scale={1.1}><LikeToggle /></Boop>
           </div>
           <div className="flex gap-3 pt-4">
             <Boop scale={1.05}><Button {...linkedInButtonConf}></Button></Boop>

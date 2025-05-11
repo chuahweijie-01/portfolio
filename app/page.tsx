@@ -28,8 +28,8 @@ export default function Home() {
   const contentFontColor = useDarkTheme() ? "text-white" : "text-gray-500"
 
   return (
-    <div className="flex pt-5 gap-10">
-      <div className="flex-2/3">
+    <div className="flex pt-5 gap-10 flex-col-reverse lg:flex-row">
+      <div className="flex-1 lg:flex-2/3">
         <RoughNotationGroup show={true}>
           <header className={`font-bold text-2xl pb-8 ${fontColor}`}>
             Hello! I am CHUAH Wei Jie, a <RoughNotation type="highlight" color="#E5D7FC">developer</RoughNotation> based in Singapore / Malaysia.
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         </RoughNotationGroup>
       </div>
-      <div className="flex flex-1/3 justify-end">
+      <div className="flex flex-1 lg:flex-1/3 justify-center lg:justify-end">
         <Image src={me} alt="me"></Image>
       </div>
     </div >

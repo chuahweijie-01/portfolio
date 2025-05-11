@@ -13,9 +13,9 @@ const NavBar = () => {
     return (
         <header className={`w-full ${bgColor}`}>
             <nav className='flex py-10 justify-between'>
-                <div className='flex gap-10'>
-                    <Link className='text-2xl text-indigo-500 font-bold' href='/'>CHUAH, Wei Jie</Link>
-                    <ul className={`flex items-center gap-5 font-bold ${fontColor}`}>
+                <div className='flex gap-5 lg:gap-10 flex-col sm:flex-row'>
+                    <Link className='text-lg lg:text-2xl text-indigo-500 font-bold' href='/'>CHUAH, Wei Jie</Link>
+                    <ul className={`flex items-center gap-3 lg:gap-5 font-bold ${fontColor} text-sm lg:text-lg`}>
                         <li>
                             <Link href='/'>About</Link>
                         </li>

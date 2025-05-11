@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { animated, useSpring } from 'react-spring';
+import { ThemeContext } from '../contexts/ThemeContext';
+import useDarkTheme from '../hooks/useDarkTheme';
 
 const ThemeToggle = () => {
-    const [isDarkMode, setDarkMode] = useState(false);
-    const toggleDarkMode = () => { setDarkMode(prev => !prev) };
+    const { toggleTheme } = useContext(ThemeContext);
 
     const properties = {
         dark: { r: 9, transform: "rotate(40deg)", cx: 12, cy: 4, opacity: 0 },
@@ -13,7 +14,7 @@ const ThemeToggle = () => {
         springConfig: { mass: 4, tension: 250, friction: 35 }
     };
 
-    const { r, transform, cx, cy, opacity } = properties[isDarkMode ? "dark" : "light"];
+    const { r, transform, cx, cy, opacity } = properties[useDarkTheme() ? "dark" : "light"];
 
     const svgContainerProps = useSpring({ transform, config: properties.springConfig });
     const centerCircleProps = useSpring({ r, config: properties.springConfig });
@@ -31,7 +32,7 @@ const ThemeToggle = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             stroke="currentColor"
-            onClick={toggleDarkMode}
+            onClick={toggleTheme}
             style={{ cursor: "pointer", ...svgContainerProps }}
         >
             <mask id="masking">
@@ -43,7 +44,7 @@ const ThemeToggle = () => {
                 cx="12"
                 cy="12"
                 {...centerCircleProps}
-                fill="black"
+                fill="white"
                 mask="url(#masking)"
             />
             <animated.g stroke="currentColor" style={linesProps}>

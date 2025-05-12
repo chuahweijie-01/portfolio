@@ -2,8 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-import ThemeToggle from './ThemeToggle'
-import Boop from './Boop'
+import NavBarIcon from './NavBarIcon'
 import useDarkTheme from '../hooks/useDarkTheme';
 
 const NavBar = () => {
@@ -31,9 +30,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div>
-                    <Boop rotation={20}>
-                        <ThemeToggle />
-                    </Boop>
+                    <NavBarIcon />
                 </div>
             </nav>
         </header>

@@ -1,0 +1,268 @@
+[
+    {
+        "id": 1,
+        "company": "Credit Agricole CIB",
+        "location": "Singapore",
+        "designation": "Fullstack / .NET Developer",
+        "startYear": "2022",
+        "startMonth": "November",
+        "endYear": "",
+        "endMonth": "",
+        "isCurrent": true,
+        "description": "Successfully completed a full development sprint for CAREV2, enhancing the user experience of an aging application through a technology stack upgrade using .NET Core and Angular. Collaborated closely with the Data Hub team to design and integrate RESTful APIs for efficient and secure data transfer. Led the UI redesign and implementation of the NSU application, achieving reduced application size and improved performance by introducing dynamic rendering and reusable Angular shared components. Designed and delivered a proof of concept (POC) for the AML EWRA application within three months, including SQL database architecture and data modeling as part of a broader system revamp initiative. Actively maintained multiple applications, authored technical documentation, and developed comprehensive test cases to ensure functionality, stability, and quality assurance.",
+        "stack": [
+            {
+                "id": 1,
+                "name": "Angular 17"
+            },
+            {
+                "id": 2,
+                "name": ".NET Core"
+            },
+            {
+                "id": 3,
+                "name": "Typescript"
+            },
+            {
+                "id": 4,
+                "name": "NodeJS"
+            },
+            {
+                "id": 5,
+                "name": "HTML"
+            },
+            {
+                "id": 6,
+                "name": "SCSS"
+            },
+            {
+                "id": 7,
+                "name": "Tailwind"
+            },
+            {
+                "id": 8,
+                "name": "SQL"
+            },
+            {
+                "id": 9,
+                "name": "Authentication"
+            },
+            {
+                "id": 10,
+                "name": "Authorization"
+            },
+            {
+                "id": 11,
+                "name": "Oracle"
+            },
+            {
+                "id": 12,
+                "name": "SSIS / SSRS"
+            },
+            {
+                "id": 13,
+                "name": "Gitlab"
+            },
+            {
+                "id": 14,
+                "name": "CI / CD"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "company": "Hotayi Electronic",
+        "location": "Malaysia",
+        "designation": "Software Engineer",
+        "startYear": "2021",
+        "startMonth": "March",
+        "endYear": "2022",
+        "endMonth": "November",
+        "isCurrent": false,
+        "description": "Designed, implemented, and upgraded an in-house material control tool tailored to the specific requirements of buyers and planners, successfully transforming manual Excel-based workflows into a streamlined, automated system process. Spearheaded the transition of the annual Q2 and Q4 inventory count processes into a centralized platform, significantly reducing human errors, simplifying operational complexity, and enhancing transparency and traceability of actions. Conducted comprehensive analysis and architectural planning of dynamic system components to centralize operations and eliminate duplicated process flows, effectively accelerating development timelines and ensuring consistent delivery of user requirements for similar configurations.",
+        "stack": [
+            {
+                "id": 1,
+                "name": ".NET / C#"
+            },
+            {
+                "id": 2,
+                "name": "WPF"
+            },
+            {
+                "id": 3,
+                "name": "Typescript"
+            },
+            {
+                "id": 4,
+                "name": "NodeJS"
+            },
+            {
+                "id": 5,
+                "name": "Java"
+            },
+            {
+                "id": 6,
+                "name": "Tortise SVN"
+            },
+            {
+                "id": 7,
+                "name": "SQL"
+            },
+            {
+                "id": 10,
+                "name": "Gitlab"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "company": "Tunku Abdul Rahman University College (TARC)",
+        "location": "Malaysia",
+        "designation": "Lecturer of Web Technologies",
+        "startYear": "2022",
+        "startMonth": "July",
+        "endYear": "2022",
+        "endMonth": "November",
+        "isCurrent": false,
+        "description": "Conducted practical classes on Web Systems and Technologies, guiding students through hands-on learning with PHP and MySQL for dynamic web development. Monitored and assessed academic progress, providing constructive feedback and academic support. Encouraged intellectual curiosity, critical thinking, and a sense of responsibility among students. Collaborated with students on developing complete web systems, offering real-world insights into effective database design, CRUD operations, and form control. Regularly shared practical industry examples to bridge the gap between theory and application.",
+        "stack": [
+            {
+                "id": 1,
+                "name": "HTML"
+            },
+            {
+                "id": 2,
+                "name": "CSS"
+            },
+            {
+                "id": 3,
+                "name": "PHP"
+            },
+            {
+                "id": 4,
+                "name": "SQL"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "company": "H! Owner",
+        "location": "Malaysia",
+        "designation": "Freelance Fullstack Developer",
+        "startYear": "2021",
+        "startMonth": "January",
+        "endYear": "2021",
+        "endMonth": "March",
+        "isCurrent": false,
+        "description": "Developed a full-stack e-commerce application using Node.js and Express.js, deploying the system on Heroku and architecting the underlying SQL database schema to support scalable data storage and efficient retrieval. Designed and implemented RESTful APIs to facilitate seamless data exchange across the application. Integrated Stripe as the payment gateway to securely manage user and vendor payment account details and process real-time transactions. Additionally, configured and deployed Twilio SendGrid to handle automated email workflows for user subscriptions, order confirmations, and account changes, enabling traceability of user actions and enhancing customer communication.",
+        "stack": [
+            {
+                "id": 1,
+                "name": "ReactJS"
+            },
+            {
+                "id": 2,
+                "name": "ExpressJS"
+            },
+            {
+                "id": 3,
+                "name": "Typescript"
+            },
+            {
+                "id": 4,
+                "name": "NodeJS"
+            },
+            {
+                "id": 5,
+                "name": "SQL"
+            },
+            {
+                "id": 6,
+                "name": "Twilio"
+            },
+            {
+                "id": 7,
+                "name": "SendGrid"
+            },
+            {
+                "id": 8,
+                "name": "Stripe"
+            },
+            {
+                "id": 9,
+                "name": "Heroku"
+            },
+            {
+                "id": 10,
+                "name": "Gitlab"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "company": "Hofon Spring Corporation Ltd",
+        "location": "New Taipei, Taiwan",
+        "designation": "Software Engineer",
+        "startYear": "2020",
+        "startMonth": "January",
+        "endYear": "2021",
+        "endMonth": "March",
+        "isCurrent": false,
+        "description": "Led and delivered a 7-month Agile sprint to design and develop an in-house e-commerce system using Node.js and Express.js. Architected the SQL database schema and modeled RESTful APIs to support scalable and efficient data operations. Managed a team of three engineers, overseeing development progress and ensuring timely delivery of sprint milestones. Initiated, planned, and executed a Raspberry Pi–based hardware project that successfully replaced legacy IRV machines with a more compact, efficient solution. Upgraded various in-house software systems based on user feedback and evolving requirements, and proactively established documentation practices across all internal projects to support onboarding and long-term maintainability.",
+        "stack": [
+            {
+                "id": 1,
+                "name": "ReactJS"
+            },
+            {
+                "id": 2,
+                "name": "ExpressJS"
+            },
+            {
+                "id": 3,
+                "name": "Typescript"
+            },
+            {
+                "id": 4,
+                "name": "NodeJS"
+            },
+            {
+                "id": 5,
+                "name": ".NET / C#"
+            },
+            {
+                "id": 6,
+                "name": "WPF"
+            },
+            {
+                "id": 7,
+                "name": "Amazon Web Services (AWS)"
+            },
+            {
+                "id": 8,
+                "name": "Gitlab"
+            },
+            {
+                "id": 9,
+                "name": "Andriod Programming"
+            },
+            {
+                "id": 10,
+                "name": "React Native"
+            },
+            {
+                "id": 11,
+                "name": "Raspberry Pi / Arduino"
+            },
+            {
+                "id": 12,
+                "name": "CI / CD"
+            },
+            {
+                "id": 13,
+                "name": "MSSQL"
+            }
+        ]
+    }
+]

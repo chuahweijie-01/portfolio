@@ -9,7 +9,7 @@
         "endYear": "",
         "endMonth": "",
         "isCurrent": true,
-        "description": "Successfully completed a full development sprint for CAREV2, enhancing the user experience of an aging application through a technology stack upgrade using .NET Core and Angular. Collaborated closely with the Data Hub team to design and integrate RESTful APIs for efficient and secure data transfer. Led the UI redesign and implementation of the NSU application, achieving reduced application size and improved performance by introducing dynamic rendering and reusable Angular shared components. Designed and delivered a proof of concept (POC) for the AML EWRA application within three months, including SQL database architecture and data modeling as part of a broader system revamp initiative. Actively maintained multiple applications, authored technical documentation, and developed comprehensive test cases to ensure functionality, stability, and quality assurance.",
+        "description": "Successfully completed a full development sprint for CAREV2, enhancing the user experience of an aging application through a technology stack upgrade using .NET Core and Angular. Collaborated closely with the Data Hub team to design and integrate RESTful APIs for efficient and secure data transfer. Involved in complete revamping of user interface of NSU application, including Angular upgrade, introducing dynamic rendering and reusable shared components for performance and size enhancement. Designed and delivered a proof of concept (POC) for the AML EWRA application within three months, including SQL database architecture and data modeling. Actively maintained multiple applications, create technical documentation, and developed comprehensive test cases to ensure functionality, stability, and quality assurance.",
         "stack": [
             {
                 "id": 1,
@@ -79,7 +79,7 @@
         "endYear": "2022",
         "endMonth": "November",
         "isCurrent": false,
-        "description": "Designed, implemented, and upgraded an in-house material control tool tailored to the specific requirements of buyers and planners, successfully transforming manual Excel-based workflows into a streamlined, automated system process. Spearheaded the transition of the annual Q2 and Q4 inventory count processes into a centralized platform, significantly reducing human errors, simplifying operational complexity, and enhancing transparency and traceability of actions. Conducted comprehensive analysis and architectural planning of dynamic system components to centralize operations and eliminate duplicated process flows, effectively accelerating development timelines and ensuring consistent delivery of user requirements for similar configurations.",
+        "description": "Designed, implemented, and upgraded an in-house material control tool according to buyers and planners requirements. Successfully transforming manual Excel-based workflows into a streamlined, automated system process. Transition of the annual Q2 and Q4 inventory count processes into a centralized platform that helps to reduce human errors, simplifying complex operation, and enhancing transparency and traceability of actions. Analysed and architected dynamic components to centralised and eliminate replicated process flow, shortened development timeline when meeting user requirement on similar setup.",
         "stack": [
             {
                 "id": 1,
@@ -155,7 +155,7 @@
         "endYear": "2021",
         "endMonth": "March",
         "isCurrent": false,
-        "description": "Developed a full-stack e-commerce application using Node.js and Express.js, deploying the system on Heroku and architecting the underlying SQL database schema to support scalable data storage and efficient retrieval. Designed and implemented RESTful APIs to facilitate seamless data exchange across the application. Integrated Stripe as the payment gateway to securely manage user and vendor payment account details and process real-time transactions. Additionally, configured and deployed Twilio SendGrid to handle automated email workflows for user subscriptions, order confirmations, and account changes, enabling traceability of user actions and enhancing customer communication.",
+        "description": "DDeveloped e-commerce system using Node/ExpressJS framework. Deployed application under Heroku and architected SQL database design along with REST APIs that served for data transfer. Integrated Stripe as the payment gateway to securely manage user and vendor payment account details and process real-time transactions. Additionally, configured and deployed Twilio SendGrid to handle automated email workflows for user subscriptions, order confirmations, and account changes, enabling traceability of user actions and enhancing customer communication.",
         "stack": [
             {
                 "id": 1,

@@ -6,7 +6,7 @@ import NavBarIcon from './NavBarIcon'
 import useDarkTheme from '../hooks/useDarkTheme';
 
 const NavBar = () => {
-    const bgColor = useDarkTheme() ? "bg-black" : "bg-white";
+    const bgColor = useDarkTheme() ? "bg-zinc-900" : "bg-white";
     const fontColor = useDarkTheme() ? "text-white" : "text-gray-500";
 
     return (
@@ -25,7 +25,7 @@ const NavBar = () => {
                             <Link href='/'>Blog</Link>
                         </li>
                         <li>
-                            <Link href='/'>Contact</Link>
+                            <Link href='/contact'>Contact</Link>
                         </li>
                     </ul>
                 </div>

@@ -13,15 +13,15 @@ const CareerPath = () => {
     return careers.map(career => (
       <div key={career.id} className="group relative mb-15 lg:hover:!opacity-100 lg:group-hover/list:opacity-30">
         <div className={`transition-all duration-300 ease-in-out block lg:flex lg:gap-5 ${fontColor} lg:hover:scale-102 `}>
-          <div className='lg:w-1/5 text-sm'>
+          <div className='lg:w-1/5 text-sm pb-3 lg:pb-0'>
             {`${career.startMonth} ${career.startYear} - ${career.isCurrent ? 'Current' : `${career.endMonth} ${career.endYear}`}`}
           </div>
           <div className='lg:w-4/5'>
-            <div className='flex gap-1 items-center pb-2'>
+            <div className='flex gap-1 items-start lg:items-center pb-2 flex-col lg:flex-row'>
               <span className='font-bold lg:group-hover:text-indigo-500'>{career.designation}</span>
-              <span> · </span>
+              <span className='hidden lg:block'> · </span>
               <span>{career.company}</span>
-              <span> · </span>
+              <span className='hidden lg:block'> · </span>
               <span>{career.location}</span>
             </div>
             <div className={`${contentFontColor} pb-2`}>

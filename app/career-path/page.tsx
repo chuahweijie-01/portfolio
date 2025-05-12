@@ -18,7 +18,7 @@ const CareerPath = () => {
           </div>
           <div className='lg:w-4/5'>
             <div className='flex gap-1 items-start lg:items-center pb-2 flex-col lg:flex-row'>
-              <span className='font-bold lg:group-hover:text-indigo-500'>{career.designation}</span>
+              <span className='font-bold text-indigo-500'>{career.designation}</span>
               <span className='hidden lg:block'> · </span>
               <span>{career.company}</span>
               <span className='hidden lg:block'> · </span>

@@ -4,24 +4,25 @@ import Image from "next/image";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import me from "./assets/images/me.jpg"
 import Button from "./components/Button";
-import { IButton } from "./interfaces/IButton";
 import Boop from "./components/Boop";
 import useDarkTheme from "./hooks/useDarkTheme";
 
 export default function Home() {
 
-  const linkedInButtonConf: IButton = {
+  const redirectToLink = (link: string) => window.location.href = link;
+
+  const linkedInButtonConf = {
     text: "View LinkedIn",
     textcolor: useDarkTheme() ? "text-black" : "text-white",
     bgcolor: useDarkTheme() ? "bg-white" : "bg-slate-800",
-    link: "https://www.linkedin.com/in/chuah-wei-jie-113374191/"
+    onClick: () => redirectToLink("https://www.linkedin.com/in/chuah-wei-jie-113374191/")
   }
 
-  const gitHubButtonConf: IButton = {
+  const gitHubButtonConf = {
     text: "View Github",
     textcolor: useDarkTheme() ? "text-white" : "text-black",
     bgcolor: useDarkTheme() ? "bg-slate-800" : "bg-white",
-    link: "https://github.com/chuahweijie-01"
+    onClick: () => redirectToLink("https://github.com/chuahweijie-01")
   }
 
   const fontColor = useDarkTheme() ? "text-white" : "text-black";

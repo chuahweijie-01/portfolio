@@ -15,18 +15,12 @@ const NavBar = () => {
                 <div className='flex gap-5 lg:gap-10 flex-col sm:flex-row'>
                     <Link className='text-lg lg:text-2xl text-indigo-500 font-bold' href='/'>CHUAH, Wei Jie</Link>
                     <ul className={`flex items-center gap-3 lg:gap-5 font-bold ${fontColor} text-sm lg:text-lg`}>
-                        <li>
-                            <Link href='/'>About</Link>
-                        </li>
-                        <li>
-                            <Link href='/'>Project</Link>
-                        </li>
-                        <li>
-                            <Link href='/'>Blog</Link>
-                        </li>
-                        <li>
-                            <Link href='/contact'>Contact</Link>
-                        </li>
+                        <li> <Link href='/'>About</Link> </li>
+                        {/*
+                        <li> <Link href='/'>Project</Link> </li>
+                        <li> <Link href='/'>Blog</Link> </li>
+                        */}
+                        <li> <Link href='/contact'>Contact</Link> </li>
                     </ul>
                 </div>
                 <div>

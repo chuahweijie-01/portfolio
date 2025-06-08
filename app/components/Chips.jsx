@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Chips = (props) => {
+const Chips = ({ tech }) => {
     return (
-        <div key={props.id} className='text-indigo-500 bg-indigo-200/30 p-2 text-xs rounded-lg pointer-events-none'>{props.name}</div>
+        <span key={Math.random()} className='text-indigo-500 bg-indigo-200/30 p-2 text-xs rounded-lg pointer-events-none'>{tech}</span>
     )
 }
 

@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { animated, useSpring } from 'react-spring';
-import { ThemeContext } from '../contexts/ThemeContext';
-import useDarkTheme from '../hooks/useDarkTheme';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import useDarkTheme from '../../hooks/useDarkTheme';
 
 const ThemeToggle = () => {
     const { toggleTheme } = useContext(ThemeContext);

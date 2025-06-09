@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import me from "./assets/images/me.jpg"
-import Button from "./components/Button";
-import Boop from "./components/Boop";
+import Button from "./components/common/Button";
+import Boop from "./components/animation/Boop";
 import useDarkTheme from "./hooks/useDarkTheme";
 
 export default function Home() {

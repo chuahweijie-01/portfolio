@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import useDarkTheme from '../hooks/useDarkTheme';
 import staticCareers from '../assets/mock/career.json';
-import Chips from '../components/Chips';
-import { GetAllCareerResponse } from './interfaces/get-all-career-response';
-import numberToMonth from '../utils/numberToMonth';
+import Chips from '../components/common/Chips';
+import { GetAllCareerResponse } from './types/get-all-career-response';
+import numberToMonth from '../utils/date/numberToMonth';
 
 const CareerPath = () => {
   const [careers, setCareers] = useState<GetAllCareerResponse[]>([]);

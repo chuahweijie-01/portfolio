@@ -1,4 +1,4 @@
-import { GetAllCareerResponse } from "../interfaces/get-all-career-response";
+import { GetAllCareerResponse } from "../types/get-all-career-response";
 
 const apiRequest = async <T>(
     endpoint: string,

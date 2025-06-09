@@ -3,9 +3,17 @@
 import { createContext, useEffect, useState } from "react";
 import { DARK_MODE, LIGHT_MODE, THEME } from "../constants/constant";
 
-export const ThemeContext = createContext();
+type ThemeContextType = {
+    theme: string;
+    toggleTheme: () => void;
+};
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeContext = createContext<ThemeContextType>({
+    theme: LIGHT_MODE,
+    toggleTheme: () => {},
+});
+
+export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
     const [theme, setTheme] = useState(LIGHT_MODE);
 
     useEffect(() => {

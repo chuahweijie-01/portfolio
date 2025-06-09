@@ -1,9 +1,14 @@
 import React from 'react';
 import { ArrowRight, Check, Loader } from 'react-feather';
 import useBoop from '@/app/hooks/useBoop';
-import { animated } from 'react-spring';
+import { animated, AnimatedProps } from 'react-spring';
 
-const SendMailButton = ({ sent, loading }) => {
+type SendMailButtonProps = {
+  sent: boolean;
+  loading: boolean;
+};
+
+const SendMailButton = ({ sent, loading }: SendMailButtonProps) => {
   const [style, trigger] = useBoop({ x: 2 });
   const text = sent ? 'Boom. Sent.' : loading ? 'Blast-off in 3..2..1..' : 'Detonate Email';
   const icon = sent
@@ -15,13 +20,13 @@ const SendMailButton = ({ sent, loading }) => {
 
   return (
     <button
-      onMouseEnter={trigger}
+      onMouseEnter={trigger as React.MouseEventHandler<HTMLSpanElement>}
       className={`flex items-center justify-between pl-5 pr-3 py-2 w-full ${buttonbg} 
         text-sm border cursor-pointer rounded-sm transition-colors duration-300`}
       type="submit"
     >
       <span>{text}</span>
-      <animated.span style={style}>{icon}</animated.span>
+      <animated.span style={style as AnimatedProps<React.HTMLAttributes<HTMLSpanElement>>['style']}>{icon}</animated.span>
     </button>
   )
 }

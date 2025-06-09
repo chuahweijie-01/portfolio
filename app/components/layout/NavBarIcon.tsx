@@ -1,6 +1,6 @@
 import React from 'react'
-import ThemeToggle from './ThemeToggle'
-import Boop from './Boop'
+import ThemeToggle from '../common/ThemeToggle'
+import Boop from '../animation/Boop'
 import Link from 'next/link'
 
 const NavBarIcon = () => {

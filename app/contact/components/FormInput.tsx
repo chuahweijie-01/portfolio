@@ -1,6 +1,14 @@
 import React from 'react';
 
-const FormInput = ({ name, label, type = 'text', placeholder, required }) => {
+type FormInputProps = {
+    name: string;
+    label: string;
+    type?: string;
+    placeholder?: string;
+    required?: boolean;
+};
+
+const FormInput: React.FC<FormInputProps> = ({ name, label, type = 'text', placeholder, required }) => {
     return (
         <div className="flex flex-1 flex-col">
             <span className="text-black pb-1">{label}</span>

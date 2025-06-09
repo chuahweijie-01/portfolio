@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 import NavBarIcon from './NavBarIcon'
-import useDarkTheme from '../hooks/useDarkTheme';
+import useDarkTheme from '../../hooks/useDarkTheme';
 
 const NavBar = () => {
     const bgColor = useDarkTheme() ? "bg-zinc-900" : "bg-white";
@@ -16,10 +16,6 @@ const NavBar = () => {
                     <Link className='text-lg lg:text-2xl text-indigo-500 font-bold' href='/'>CHUAH, Wei Jie</Link>
                     <ul className={`flex items-center gap-3 lg:gap-5 font-bold ${fontColor} text-sm lg:text-lg`}>
                         <li> <Link href='/'>About</Link> </li>
-                        {/*
-                        <li> <Link href='/'>Project</Link> </li>
-                        <li> <Link href='/'>Blog</Link> </li>
-                        */}
                         <li> <Link href='/contact'>Contact</Link> </li>
                     </ul>
                 </div>

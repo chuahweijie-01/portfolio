@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
-import Body from "./components/Body";
 import { ThemeProvider } from './contexts/ThemeContext';
+import Body from "./components/layout/Body";
 
 export const metadata: Metadata = {
   title: "dev",

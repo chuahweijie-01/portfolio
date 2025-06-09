@@ -1,6 +1,12 @@
 import React from 'react';
 
-const MessageInput = ({ name, label, required }) => {
+type MessageInputProps = {
+    name: string;
+    label: string;
+    required?: boolean;
+}
+
+const MessageInput: React.FC<MessageInputProps> = ({ name, label, required }) => {
     return (
         <div className="flex flex-col pb-3">
             <span className="text-black">{label}</span>

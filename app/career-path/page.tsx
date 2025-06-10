@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import useDarkTheme from '../hooks/useDarkTheme';
-import staticCareers from '../assets/mock/career.json';
 import Chips from '../components/common/Chips';
 import { GetAllCareerResponse } from './types/get-all-career-response';
 import numberToMonth from '../utils/date/numberToMonth';
@@ -12,13 +11,16 @@ const CareerPath = () => {
   const darkTheme = useDarkTheme();
 
   useEffect(() => {
-    setCareers(staticCareers)
-    /* TODO: Buy a domain for HTTP - HTTPS connection */
-    /*
-    getCareers()
-      .then(setCareers)
-      .catch(error => console.error('Failed to fetch careers:', error));
-    */
+    const fetchCareers = async () => {
+      try {
+        const res = await fetch('/api/careers')
+        const data = await res.json();
+        setCareers(data)
+      } catch (error) {
+        console.error('Failed to fetch careers:', error);
+      }
+    }
+    fetchCareers();
   }, []);
 
   const fontColor = darkTheme ? "text-white" : "text-black";

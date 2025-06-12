@@ -8,6 +8,7 @@ import numberToMonth from '../utils/date/numberToMonth';
 
 const CareerPath = () => {
   const [careers, setCareers] = useState<GetAllCareerResponse[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const darkTheme = useDarkTheme();
 
   useEffect(() => {
@@ -16,8 +17,10 @@ const CareerPath = () => {
         const res = await fetch('/api/careers')
         const data = await res.json();
         setCareers(data)
+        setLoading(false)
       } catch (error) {
         console.error('Failed to fetch careers:', error);
+        setLoading(false)
       }
     }
     fetchCareers();
@@ -25,6 +28,14 @@ const CareerPath = () => {
 
   const fontColor = darkTheme ? "text-white" : "text-black";
   const contentFontColor = darkTheme ? "text-white" : "text-gray-500";
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-64">
+        <span className={`text-sm ${fontColor}`}>Building your professional legacy... please hold 🚀</span>
+      </div>
+    );
+  }
 
   return (
     <div>

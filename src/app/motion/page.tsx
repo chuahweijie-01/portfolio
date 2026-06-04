@@ -14,6 +14,11 @@ type EaseConfig = {
     controlPoint2: Point,
 }
 
+type Point = {
+    x: number;
+    y: number;
+};
+
 const BezierVisualize = () => {
     const viewBoxWidth = 300;
     const viewBoxHeight = 300;

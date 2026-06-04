@@ -1,14 +1,12 @@
 'use client';
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import NavBarIcon from './NavBarIcon'
 import NavDropDown from '../ui/NavDropDown';
 import useDarkTheme from '@/src/hooks/useDarkTheme';
 
 const NavBar = () => {
-    const [open, setOpen] = useState(false);
-
     const bgColor = useDarkTheme() ? "bg-zinc-900" : "bg-white";
     const fontColor = useDarkTheme() ? "text-white" : "text-gray-500";
 

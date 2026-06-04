@@ -13,6 +13,11 @@ type BezierProps = {
     }) => void;
 };
 
+type Point = {
+    x: number;
+    y: number;
+};
+
 const Bezier: React.FC<BezierProps> = ({
     viewBoxWidth,
     viewBoxHeight,

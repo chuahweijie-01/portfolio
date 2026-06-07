@@ -3,6 +3,10 @@ import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  webpack(config) {
+    config.cache = false;
+    return config;
+  },
 };
 
 const withMDX = createMDX({

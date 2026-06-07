@@ -1,4 +1,5 @@
-import useDarkTheme from '@/src/hooks/useDarkTheme';
+'use client'
+
 import React, { useRef, useState } from 'react';
 import { animated, to, useSpring } from 'react-spring';
 import { Point } from '../types/types';
@@ -21,8 +22,6 @@ const Bezier = ({
     controlPoint2,
     onChange
 }: Props) => {
-
-    const darkTheme = useDarkTheme();
     const startPoint: Point = { x: 0, y: viewBoxHeight };
     const endPoint: Point = { x: viewBoxWidth, y: 0 };
 
@@ -124,7 +123,7 @@ const Bezier = ({
             >
                 <defs>
                     <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <circle cx="0" cy="0" r="1" fill={darkTheme ? "#fff" : "#000"} />
+                        <circle cx="0" cy="0" r="1" fill='currentColor' />
                     </pattern>
                 </defs>
 
@@ -162,7 +161,7 @@ const Bezier = ({
                 <animated.path
                     d={animatedD}
                     fill="none"
-                    stroke={darkTheme ? "#fff" : "#000"}
+                    stroke='currentColor'
                     strokeWidth={3}
                 />
 

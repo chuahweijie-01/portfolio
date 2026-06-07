@@ -17,7 +17,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className='py-10 grid gap-10 sm:grid-cols-[1fr_auto]'>
+        <footer className='pb-10 pt-20 grid gap-10 sm:grid-cols-[1fr_auto]'>
             <div className='space-y-5'>
                 <Image
                     src={me}

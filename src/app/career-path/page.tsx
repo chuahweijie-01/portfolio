@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import useDarkTheme from '../../hooks/useDarkTheme';
 import { GetAllCareerResponse } from '../../features/career-path/types/get-all-career-response';
 import numberToMonth from '../../utils/date/numberToMonth';
 import Chips from '@/src/components/ui/Chips';
@@ -9,7 +8,6 @@ import Chips from '@/src/components/ui/Chips';
 const CareerPath = () => {
   const [careers, setCareers] = useState<GetAllCareerResponse[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const darkTheme = useDarkTheme();
 
   useEffect(() => {
     const fetchCareers = async () => {
@@ -26,24 +24,21 @@ const CareerPath = () => {
     fetchCareers();
   }, []);
 
-  const fontColor = darkTheme ? "text-white" : "text-black";
-  const contentFontColor = darkTheme ? "text-white" : "text-gray-500";
-
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <span className={`text-sm ${fontColor}`}>Building your professional legacy... please hold 🚀</span>
+        <span className='text-sm dark:text-white text-black'>Building your professional legacy... please hold 🚀</span>
       </div>
     );
   }
 
   return (
     <div>
-      <h2 className={`font-bold ${fontColor} text-2xl pb-8`}>Where I&#39;ve Worked</h2>
+      <h2 className='font-bold dark:text-white text-black text-2xl pb-8'>Where I&#39;ve Worked</h2>
       <div className='group/list'>
         {careers.map(({ _id, startMonth, startYear, endMonth, endYear, isCurrent, designation, company, location, description, stack }) => (
           <div key={_id} className="group transition-all duration-300 ease-in-out relative mb-15 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-            <div className={`transition-all duration-300 ease-in-out block lg:flex lg:gap-5 ${fontColor} lg:hover:scale-102`}>
+            <div className='transition-all duration-300 ease-in-out block lg:flex lg:gap-5 dark:text-white text-black lg:hover:scale-102'>
               <div className='lg:w-1/5 text-sm pb-3 lg:pb-0'>
                 {`${numberToMonth(startMonth)} ${startYear} - ${isCurrent ? 'Current' : `${numberToMonth(endMonth!)} ${endYear}`}`}
               </div>
@@ -55,7 +50,7 @@ const CareerPath = () => {
                   <span className='hidden lg:block'> · </span>
                   <span>{location}</span>
                 </div>
-                <div className={`${contentFontColor} pb-2`}>
+                <div className='pb-2 dark:text-white text-gray-500'>
                   <ul className="list-disc pl-5">
                     {description.map((sentence, index) => (
                       <li className="text-sm" key={index}>{sentence}</li>

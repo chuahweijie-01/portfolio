@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useContext } from 'react'
+import React from 'react'
 import { animated, useSpring } from 'react-spring';
-import { ThemeContext } from '../../contexts/ThemeContext';
-import useDarkTheme from '@/src/hooks/useDarkTheme';
+import { useTheme } from 'next-themes';
 
 const ThemeToggle = () => {
-    const { toggleTheme } = useContext(ThemeContext);
+    const { theme, setTheme } = useTheme()
 
     const properties = {
         dark: { r: 9, transform: "rotate(40deg)", cx: 12, cy: 4, opacity: 0 },
@@ -14,12 +13,16 @@ const ThemeToggle = () => {
         springConfig: { mass: 4, tension: 250, friction: 35 }
     };
 
-    const { r, transform, cx, cy, opacity } = properties[useDarkTheme() ? "dark" : "light"];
+    const { r, transform, cx, cy, opacity } = properties[theme == "dark" ? "dark" : "light"];
 
     const svgContainerProps = useSpring({ transform, config: properties.springConfig });
     const centerCircleProps = useSpring({ r, config: properties.springConfig });
     const maskedCircleProps = useSpring({ cx, cy, config: properties.springConfig });
     const linesProps = useSpring({ opacity, config: properties.springConfig });
+
+    const toggle = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    }
 
     return (
         <animated.svg
@@ -32,12 +35,13 @@ const ThemeToggle = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             stroke="currentColor"
-            onClick={toggleTheme}
+            onClick={toggle}
             style={{ cursor: "pointer", ...svgContainerProps }}
+            suppressHydrationWarning
         >
-            <mask id="masking">
+            <mask id="masking" suppressHydrationWarning>
                 <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                <animated.circle {...maskedCircleProps} r="9" fill="black" />
+                <animated.circle {...maskedCircleProps} r="9" fill="black" suppressHydrationWarning />
             </mask>
 
             <animated.circle
@@ -46,8 +50,9 @@ const ThemeToggle = () => {
                 {...centerCircleProps}
                 fill="white"
                 mask="url(#masking)"
+                suppressHydrationWarning
             />
-            <animated.g stroke="currentColor" style={linesProps}>
+            <animated.g stroke="currentColor" style={linesProps} suppressHydrationWarning>
                 <line x1="12" y1="1" x2="12" y2="3" />
                 <line x1="12" y1="21" x2="12" y2="23" />
                 <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />

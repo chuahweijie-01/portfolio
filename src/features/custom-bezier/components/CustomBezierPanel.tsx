@@ -2,7 +2,6 @@
 
 import Boop from '@/src/components/animation/Boop';
 import Button from '@/src/components/ui/Button';
-import useDarkTheme from '@/src/hooks/useDarkTheme';
 import React, { useState } from 'react'
 import { Copy } from 'react-feather';
 import { easeCollections } from '../constants/constant';
@@ -18,8 +17,6 @@ const CustomBezierPanel = () => {
     const [controlPoint1, setControlPoint1] = useState<Point>({ x: 0, y: 0 });
     const [controlPoint2, setControlPoint2] = useState<Point>({ x: 1, y: 1 });
     const [selectedEase, setSelectedEase] = useState('linear');
-    const darkTheme = useDarkTheme();
-
 
     const getXValue = (value: number) => value.toFixed(2);
     const getYValue = (value: number) => value.toFixed(2);
@@ -29,8 +26,10 @@ const CustomBezierPanel = () => {
             <Boop scale={1.05} key={x.label}>
                 <Button
                     text={x.label}
-                    textcolor={darkTheme ? (selectedEase === x.label ? 'text-amber-400' : 'text-white') : (selectedEase === x.label ? 'text-amber-400' : 'text-black')}
-                    style={`text-xm border ${darkTheme ? (selectedEase === x.label ? 'border-amber-400' : 'border-white') : (selectedEase === x.label ? 'border-amber-400' : 'border-black')} ${selectedEase === x.label ? '' : 'hover:border-gray-500/70'}`}
+                    textcolor={`${selectedEase === x.label ? 'text-amber-400' : 'text-black dark:text-white'} `}
+                    style={`
+                        text-xm border 
+                        ${selectedEase === x.label ? 'border-amber-400' : 'border-black hover:border-gray-500/70 dark:border-white'}`}
                     onClick={() => {
                         setSelectedEase(x.label);
                         setControlPoint1(x.controlPoint1);
@@ -42,7 +41,7 @@ const CustomBezierPanel = () => {
     }
 
     return (
-        <div className={`flex justify-center flex-col px-20 ${darkTheme ? 'text-white' : 'text-black'}`}>
+        <div className='flex justify-center flex-col px-20 dark:text-white text-black'>
             <div>
                 <div className='flex flex-col items-center gap-3 py-8'>
                     <div className='flex gap-6 justify-center'>

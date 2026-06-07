@@ -1,0 +1,36 @@
+import CustomBezierPanel from '@/src/features/custom-bezier/components/CustomBezierPanel'
+import Aside from '@/src/components/ui/Aside'
+
+export const metadata = {
+    title: "Custom Bézier Curves",
+    created: "2026-06-06",
+    updated: "2026-06-06",
+    description: "Explore the fascinating world of custom Bézier curves in CSS animations.",
+    summary: "Discover the hidden connection between vector design and animation. This article explains how Bézier curves shape motion in CSS, how custom easing functions influence user experience, and includes an interactive tool for crafting your own animation timing curves.",
+}
+
+### From Graphics to Motion
+
+If you've worked with design tools like Figma or Illustrator, you've likely encountered **Bézier curves** before. 
+
+These are the smooth curves created by manipulating control handles, allowing you to fine-tune their shape and direction. Traditionally, Bézier curves are used to create vector graphics and complex shapes, for now, it's a a completely different application: **animation timing**. 
+
+One of the most interesting aspects of CSS animations is that they borrow the same mathematical concept used in vector design. Rather than drawing visual paths, CSS uses Bézier curves to describe how an animation progresses over time. In other words, they control the rate of change, the acceleration and deceleration that gives motion its character. What's remarkable is that a cubic Bézier curve can express a wide variety of motion patterns using only **four numeric values**.
+
+<Aside 
+    title="More Than Just Shapes"
+    type="info"
+>
+Instead of defining how something looks, Bézier curves can define how something moves.
+</Aside>
+
+### Creating Your Own Easing Curves
+
+The timing functions you're already familiar with, such as: `linear`, `ease`, `ease-in`, `ease-out`, and `ease-in-out` are simply predefined Bézier curves. These keywords provide convenient defaults, but they're only scratching the surface of what's possible.
+
+The real power comes from defining your own custom Bézier curves. By tweaking the control points, you can create animations that feel snappier, smoother, bouncier, or more natural, giving your interface a unique personality beyond the standard presets. 
+
+<CustomBezierPanel />
+
+To make experimentation easier, I've built a tool that lets you create and visualize custom easing curves in real time. Feel free to explore and discover motion patterns that match the experience you're trying to create.
+

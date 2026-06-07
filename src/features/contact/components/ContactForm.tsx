@@ -14,8 +14,8 @@ const ContactForm = () => {
             <div className='bg-white'>
                 <form ref={formRef} className='p-5' onSubmit={handleSubmit}>
                     <div className="flex gap-5 pb-3 flex-col lg:flex-row">
-                        <FormInput name="name" placeholder="John Doe" label="How shall I address you" required />
-                        <FormInput name="email" placeholder="johndoe@gmail.com" label="Email" type="email" required />
+                        <FormInput name="name" placeholder="Tell me who you are" label="Name" required />
+                        <FormInput name="email" placeholder="yourmail@gmail.com" label="Email" type="email" required />
                     </div>
                     <MessageInput name="message" label="Message" required />
                     <SendMailButton {...submitButtonConf} />

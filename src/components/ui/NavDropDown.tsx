@@ -40,7 +40,7 @@ const NavDropDown = ({ title, items }: Props) => {
                 onClick={handleToggle}
                 aria-haspopup='menu'
                 aria-expanded={open}
-                className='inline-flex items-center gap-2 text-current font-bold cursor-pointer'
+                className='inline-flex items-center gap-2 text-current cursor-pointer'
             >
                 {title}
             </button>

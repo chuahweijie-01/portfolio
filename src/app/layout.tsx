@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Body from "@/src/components/layout/Body";
 import { ThemeProvider } from "../contexts/ThemeContext";
+import Footer from "../components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "dev",
@@ -13,10 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider>
-        <Body>{children}</Body>
-      </ThemeProvider>
-    </html>
+    <>
+      <html lang="en">
+        <ThemeProvider>
+          <Body>{children}</Body>
+        </ThemeProvider>
+      </html>
+      <Footer />
+    </>
   );
 }

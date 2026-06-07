@@ -1,14 +1,11 @@
 'use client';
 
 import React from 'react';
-import useDarkTheme from '../../hooks/useDarkTheme';
 import ContactForm from '../../features/contact/components/ContactForm';
 
 const Contact = () => {
-    const fontColor = useDarkTheme() ? "text-white" : "text-black"; 
-
     return (
-        <div className={`${fontColor}`}>
+        <div className='text-black dark:text-white'>
             <div className={'text-2xl pb-8'}>Get In Touch</div>
             <div className='flex flex-col lg:flex-row gap-5 lg:gap-10'>
                 <div className='flex flex-1 lg:pb-0 flex-col gap-7'>

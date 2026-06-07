@@ -39,7 +39,7 @@ const Footer = () => {
                         <ul className='mt-5 space-y-3 text-sm'>
                             {section.items.map((item) => (
                                 <li key={item.label}>
-                                    <Link href={item.href} className='text-gray-500 hover:text-gray-900'>
+                                    <Link href={item.href} className='text-gray-500 hover:text-gray-900 dark:hover:text-white'>
                                         {item.label}
                                     </Link>
                                 </li>

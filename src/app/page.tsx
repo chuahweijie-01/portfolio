@@ -12,10 +12,10 @@ export default async function Home() {
       <div className="flex gap-12">
         <main className="flex-2/3">
           {posts.map((post) => (
-            <article key={post.slug}>
+            <article key={post.slug} className="group">
               <Link href={`/blog/${post.slug}`}>
                 <div>
-                  <span className="text-xl font-bold text-gray-800 border-b border-transparent hover:border-indigo-700">
+                  <span className="text-xl font-bold text-gray-800 dark:text-white border-b-2 border-transparent hover:border-indigo-700">
                     {post.title}</span>
                 </div>
               </Link>
@@ -23,10 +23,10 @@ export default async function Home() {
                 <p className="text-gray-500 mt-1 mb-4">{post.description}</p>
               )}
               {post.summary && (
-                <p className="text-gray-600 mt-2">{post.summary}</p>
+                <p className="text-gray-600 dark:text-white mt-2">{post.summary}</p>
               )}
               <Link href={`/blog/${post.slug}`}>
-                <div className='flex mt-5 group cursor-pointer'>
+                <div className='flex mt-5 group cursor-pointer dark:text-white'>
                   Read more
                   <div className='flex items-center ml-2'>
                     <svg width="36" height="12" viewBox="0 0 36 12" fill="none">
